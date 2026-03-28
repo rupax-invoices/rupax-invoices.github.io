@@ -1,0 +1,1057 @@
+<!doctype html>
+<html lang=en data-theme=dark>
+
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <title>Terms & Conditions — RupaX</title>
+  <link rel="icon" type="image/png" href="logo.jpg">
+  <meta name=description
+    content="Terms and Conditions for using the RupaX invoice generator. Understand your rights, limitations, and our liability disclaimer.">
+  <meta name=robots content="index, follow">
+  <link rel=canonical href="https://rupax-invoice.github.io/terms.html">
+  <link rel=preconnect href=https://fonts.googleapis.com>
+  <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Mono:wght@400;500&display=swap"
+    rel=stylesheet>
+  <style>
+    :root {
+      --bg: #0c0a08;
+      --bg2: #100e0b;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface2: rgba(255, 255, 255, 0.07);
+      --border: rgba(255, 255, 255, 0.07);
+      --border-mid: rgba(255, 255, 255, 0.12);
+      --text-1: #f0ede8;
+      --text-2: #a09488;
+      --text-3: #5c5550;
+      --accent: #f26522;
+      --accent-h: #ff7a35;
+      --accent-dim: rgba(242, 101, 34, 0.14);
+      --accent-glow: rgba(242, 101, 34, 0.22);
+      --green: #22c55e;
+      --red: #ef4444;
+      --ease: cubic-bezier(.4, 0, .2, 1);
+      --t: 0.18s;
+      --t2: 0.3s;
+      --font-h: 'Syne', sans-serif;
+      --font-b: 'DM Sans', sans-serif;
+      --font-m: 'DM Mono', monospace;
+      --r: 14px;
+      --rl: 22px
+    }
+
+    [data-theme=light] {
+      --bg: #f5f2ee;
+      --bg2: #ede9e3;
+      --surface: rgba(255, 255, 255, 0.65);
+      --surface2: rgba(255, 255, 255, 0.9);
+      --border: rgba(0, 0, 0, 0.07);
+      --border-mid: rgba(0, 0, 0, 0.12);
+      --text-1: #18140f;
+      --text-2: #6b6258;
+      --text-3: #a8a09a;
+      --accent-dim: rgba(242, 101, 34, 0.08)
+    }
+
+    *,
+    ::after,
+    ::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--bg);
+      color: var(--text-1);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px
+    }
+
+    ::-webkit-scrollbar-track {
+      background: 0 0
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, .1);
+      border-radius: 4px
+    }
+
+    /* ── Navigation ── */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(12, 10, 8, .8);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border);
+      transition: background var(--t2)
+    }
+
+    [data-theme=light] .nav {
+      background: rgba(245, 242, 238, .85)
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 17px;
+      color: var(--text-1)
+    }
+
+    .nav-logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      background: var(--accent);
+      box-shadow: 0 4px 14px var(--accent-glow)
+    }
+
+    .nav-logo-icon svg {
+      width: 15px;
+      height: 15px;
+      color: #fff
+    }
+
+    .nav-links,
+    .nav-right {
+      display: flex;
+      align-items: center
+    }
+
+    .nav-links {
+      gap: 32px
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-2);
+      transition: color var(--t)
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-1)
+    }
+
+    .nav-right {
+      gap: 10px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 20px;
+      border-radius: 10px;
+      font-size: 12px;
+      letter-spacing: .04em;
+      cursor: pointer;
+      border: none;
+      transition: all var(--t2) var(--ease);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: var(--font-h);
+      white-space: nowrap;
+      text-decoration: none
+    }
+
+    .btn svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 4px 14px var(--accent-glow)
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-h);
+      box-shadow: 0 6px 22px rgba(242, 101, 34, .4);
+      transform: translateY(-1px)
+    }
+
+    .btn-ghost {
+      background: 0 0;
+      color: var(--text-2);
+      border: 1px solid var(--border-mid)
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(255, 255, 255, .22);
+      color: var(--text-1)
+    }
+
+    .btn-icon {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text-2);
+      border-radius: 9px;
+      display: grid;
+      place-items: center
+    }
+
+    .btn-icon:hover {
+      border-color: var(--border-mid);
+      color: var(--text-1)
+    }
+
+    .btn-icon svg {
+      width: 16px;
+      height: 16px
+    }
+
+    /* Hamburger button */
+    .hamburger-btn {
+      display: none;
+      width: 36px;
+      height: 36px;
+      background: var(--surface);
+      border: 1px solid var(--border-mid);
+      border-radius: 9px;
+      place-items: center;
+      cursor: pointer;
+      color: var(--text-2);
+      transition: all var(--t);
+      flex-shrink: 0;
+    }
+
+    .hamburger-btn svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .hamburger-btn:hover {
+      color: var(--text-1);
+      border-color: var(--border-mid);
+    }
+
+    /* Drawer overlay */
+    .drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .6);
+      backdrop-filter: blur(4px);
+      z-index: 899;
+      display: none;
+    }
+
+    .drawer-overlay.open {
+      display: block;
+    }
+
+    /* Side drawer */
+    .mob-drawer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 280px;
+      background: var(--bg);
+      border-right: 1px solid var(--border-mid);
+      z-index: 900;
+      transform: translateX(-100%);
+      transition: transform .3s var(--ease);
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      box-shadow: 4px 0 24px rgba(0, 0, 0, .5);
+    }
+
+    .mob-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .drawer-logo {
+      font-family: var(--font-h);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--text-1);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .drawer-logo-icon {
+      width: 30px;
+      height: 30px;
+      background: var(--accent);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 3px 10px var(--accent-glow);
+    }
+
+    .drawer-logo-icon svg {
+      width: 14px;
+      height: 14px;
+      color: #fff;
+    }
+
+    .drawer-close {
+      width: 32px;
+      height: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      color: var(--text-2);
+      transition: all var(--t);
+    }
+
+    .drawer-close:hover {
+      color: var(--text-1);
+      background: var(--surface2);
+    }
+
+    .drawer-close svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    .drawer-body {
+      flex: 1;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 10px;
+      font-family: var(--font-h);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: all var(--t);
+    }
+
+    .drawer-link:hover {
+      background: var(--surface);
+      color: var(--text-1);
+    }
+
+    .drawer-link svg {
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+    }
+
+    .drawer-link.accent {
+      color: var(--accent);
+    }
+
+    .drawer-link.accent:hover {
+      background: var(--accent-dim);
+    }
+
+    .drawer-footer {
+      padding: 14px 16px;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--text-3);
+      text-align: center;
+      font-family: var(--font-m);
+    }
+
+    @media (max-width:768px) {
+      .nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger-btn {
+        display: grid;
+      }
+
+      .nav .btn-primary .btn-text {
+        display: none;
+      }
+
+      .nav .btn-primary {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        justify-content: center;
+        border-radius: 9px;
+      }
+
+      .nav .btn-primary svg {
+        margin: 0;
+      }
+    }
+
+    /* ── Terms Page ── */
+    .terms-hero {
+      position: relative;
+      padding: 140px 40px 60px;
+      text-align: center;
+      overflow: hidden
+    }
+
+    .terms-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0, rgba(242, 101, 34, .1) 0, transparent 65%)
+    }
+
+    .terms-hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: var(--font-h);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-glow);
+      border-radius: 100px;
+      padding: 5px 14px;
+      margin-bottom: 24px
+    }
+
+    .terms-hero h1 {
+      font-family: var(--font-h);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--text-1);
+      margin-bottom: 16px
+    }
+
+    .terms-hero p {
+      font-size: clamp(14px, 2vw, 17px);
+      color: var(--text-2);
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto
+    }
+
+    .terms-page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 40px 80px
+    }
+
+    .terms-section {
+      margin-bottom: 48px
+    }
+
+    .terms-section-title {
+      font-family: var(--font-h);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .terms-section-title .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-glow);
+      border-radius: 50%;
+      font-family: var(--font-m);
+      font-size: 11px;
+      color: var(--accent);
+      flex-shrink: 0
+    }
+
+    .terms-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-2)
+    }
+
+    .terms-body p {
+      margin-bottom: 14px
+    }
+
+    .terms-body strong {
+      color: var(--text-1);
+      font-weight: 600
+    }
+
+    .terms-body ul {
+      margin: 12px 0 14px 20px
+    }
+
+    .terms-body ul li {
+      margin-bottom: 8px;
+      line-height: 1.7
+    }
+
+    .terms-body ul li::marker {
+      color: var(--accent)
+    }
+
+    .disclaimer-banner {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.15);
+      border-radius: var(--rl);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start
+    }
+
+    .disclaimer-banner .icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0
+    }
+
+    .disclaimer-banner .icon svg {
+      width: 18px;
+      height: 18px;
+      color: var(--red)
+    }
+
+    .disclaimer-banner h3 {
+      font-family: var(--font-h);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 6px
+    }
+
+    .disclaimer-banner p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-2)
+    }
+
+    .last-updated {
+      font-family: var(--font-m);
+      font-size: 11px;
+      color: var(--text-3);
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-family: var(--font-h);
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--text-1)
+    }
+
+    .footer-logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: var(--accent);
+      display: grid;
+      place-items: center
+    }
+
+    .footer-logo-icon svg {
+      width: 13px;
+      height: 13px;
+      color: #fff
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap
+    }
+
+    .footer-links a {
+      font-size: 12px;
+      color: var(--text-3);
+      transition: color var(--t)
+    }
+
+    .footer-links a:hover {
+      color: var(--text-2)
+    }
+
+    .footer-copy {
+      font-size: 11px;
+      color: var(--text-3);
+      font-family: var(--font-m)
+    }
+
+    @media (max-width:600px) {
+      footer {
+        padding: 32px 20px;
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      .terms-page {
+        padding: 0 20px 60px
+      }
+
+      .terms-hero {
+        padding: 120px 20px 40px
+      }
+
+      .disclaimer-banner {
+        flex-direction: column;
+        padding: 20px
+      }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .6s var(--ease), transform .6s var(--ease)
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    .rd1 {
+      transition-delay: .1s
+    }
+
+    .rd2 {
+      transition-delay: .2s
+    }
+
+    .rd3 {
+      transition-delay: .3s
+    }
+  </style>
+</head>
+
+<body>
+  <div id="drawer-overlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+  <nav id="mob-drawer" class="mob-drawer" aria-label="Mobile navigation">
+    <div class="drawer-header">
+      <div class="drawer-logo">
+        <span class="drawer-logo-icon"><svg viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2.2
+            stroke-linecap=round>
+            <rect x=3 y=3 width=14 height=14 rx=2 />
+            <line x1=3 y1=8 x2=17 y2=8 />
+            <line x1=7 y1=13 x2=13 y2=13 />
+          </svg></span>
+        RupaX
+      </div>
+      <button class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">
+        <svg viewBox="0 0 14 14" fill=none stroke=currentColor stroke-width=2.2 stroke-linecap=round>
+          <line x1=1 y1=1 x2=13 y2=13 />
+          <line x1=13 y1=1 x2=1 y2=13 />
+        </svg>
+      </button>
+    </div>
+    <div class="drawer-body">
+      <a href="index.html" class="drawer-link" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill=none
+          stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>Home</a>
+      <a href="index.html#features" class="drawer-link" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill=none
+          stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        </svg>Features</a>
+      <a href="about.html" class="drawer-link" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill=none
+          stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <circle cx=12 cy=12 r=10 />
+          <line x1=12 y1=8 x2=12 y2=12 />
+          <line x1=12 y1=16 x2=12 y2=16 />
+        </svg>About</a>
+      <a href="blogs.html" class="drawer-link" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill=none
+          stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        </svg>Blog</a>
+      <a href="app.html" class="drawer-link accent" onclick="closeDrawer()"><svg viewBox="0 0 24 24" fill=none
+          stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <line x1=12 y1=5 x2=12 y2=19 />
+          <line x1=5 y1=12 x2=19 y2=12 />
+        </svg>Create Invoice</a>
+    </div>
+    <div class="drawer-footer">RupaX &middot; 100% Offline &amp; Private</div>
+  </nav>
+
+  <nav class=nav role=navigation aria-label="Main navigation">
+    <button class="hamburger-btn" id="hamburger-btn" onclick="openDrawer()" aria-label="Open menu"
+      aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round>
+        <line x1=3 y1=6 x2=21 y2=6 />
+        <line x1=3 y1=12 x2=21 y2=12 />
+        <line x1=3 y1=18 x2=21 y2=18 />
+      </svg>
+    </button>
+    <a href=index.html class=nav-logo aria-label="RupaX home">
+      <span class=nav-logo-icon>
+        <svg viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2.2 stroke-linecap=round>
+          <rect x=3 y=3 width=14 height=14 rx=2 />
+          <line x1=3 y1=8 x2=17 y2=8 />
+          <line x1=7 y1=13 x2=13 y2=13 />
+        </svg>
+      </span>
+      RupaX
+    </a>
+    <div class=nav-links>
+      <a href=index.html>Home</a>
+      <a href=index.html#features>Features</a>
+      <a href=about.html>About</a>
+      <a href=blogs.html>Blog</a>
+      <a href=terms.html class=active>Terms</a>
+    </div>
+    <div class=nav-right>
+      <button class=btn-icon onclick=toggleTheme() id=theme-btn aria-label="Toggle theme">
+        <svg id=nav-sun viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round>
+          <circle cx=10 cy=10 r=4 />
+          <line x1=10 y1=2 x2=10 y2=4 />
+          <line x1=10 y1=16 x2=10 y2=18 />
+          <line x1=2 y1=10 x2=4 y2=10 />
+          <line x1=16 y1=10 x2=18 y2=10 />
+        </svg>
+        <svg id=nav-moon viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2 stroke-linecap=round
+          style=display:none>
+          <path d="M17 12.5A7 7 0 1 1 7.5 3a5.5 5.5 0 0 0 9.5 9.5z" />
+        </svg>
+      </button>
+      <a href=app.html class="btn btn-primary">
+        <svg viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2.2 stroke-linecap=round>
+          <line x1=10 y1=4 x2=10 y2=16 />
+          <line x1=4 y1=10 x2=16 y2=10 />
+        </svg>
+        <span class="btn-text">Create Invoice</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class=terms-hero>
+    <div class=terms-hero-bg aria-hidden=true></div>
+    <div class=terms-hero-content>
+      <div class=eyebrow>Legal</div>
+      <h1>Terms &amp; Conditions</h1>
+      <p>Please read these terms carefully before using RupaX. By accessing or using the service, you agree to be bound
+        by these terms.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class=terms-page>
+
+    <!-- IMPORTANT DISCLAIMER BANNER -->
+    <div class="disclaimer-banner reveal">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+          <line x1="12" y1="9" x2="12" y2="13" />
+          <line x1="12" y1="17" x2="12.01" y2="17" />
+        </svg>
+      </div>
+      <div>
+        <h3>Important Disclaimer</h3>
+        <p><strong>RupaX is not responsible for any invoices, bills, or financial documents generated using this
+            tool.</strong>
+          All invoices are created by users on their own behalf. RupaX provides the tool &ldquo;as is&rdquo; and does
+          not verify, validate, or guarantee the accuracy, legality, or enforceability of any generated document. Users
+          bear full responsibility for the content and use of their invoices.</p>
+      </div>
+    </div>
+
+    <section class="terms-section reveal rd1">
+      <h2 class="terms-section-title"><span class="section-num">1</span> Acceptance of Terms</h2>
+      <div class="terms-body">
+        <p>By using the RupaX invoice generator (&ldquo;Service&rdquo;), you agree to these Terms &amp; Conditions. If
+          you do not agree, you must not use the Service.</p>
+        <p>RupaX reserves the right to modify these terms at any time. Continued use of the Service after changes
+          constitutes acceptance of the revised terms.</p>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd2">
+      <h2 class="terms-section-title"><span class="section-num">2</span> Service Description</h2>
+      <div class="terms-body">
+        <p>RupaX is a <strong>free, client-side invoice generation tool</strong> that allows users to create, preview,
+          and download invoice PDFs. The Service also includes a fare splitting utility.</p>
+        <ul>
+          <li>All data processing occurs locally in your browser</li>
+          <li>No user data is uploaded to external servers during invoice creation</li>
+          <li>PDF generation is handled entirely client-side using html2pdf.js</li>
+          <li>Business details are saved to browser localStorage for convenience only</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd1">
+      <h2 class="terms-section-title"><span class="section-num">3</span> No Liability for Generated Invoices</h2>
+      <div class="terms-body">
+        <p><strong>RupaX is not responsible for any invoices, bills, receipts, or financial documents generated using
+            this Service.</strong> This includes but is not limited to:</p>
+        <ul>
+          <li>Incorrect amounts, tax calculations, or totals displayed on invoices</li>
+          <li>Inaccurate business details, client information, or GST numbers</li>
+          <li>Invoices used for fraudulent, misleading, or illegal purposes</li>
+          <li>Financial disputes or losses arising from the use of generated invoices</li>
+          <li>Non-compliance with local tax laws, GST regulations, or financial reporting requirements</li>
+        </ul>
+        <p>Users are solely responsible for ensuring that all information entered into the invoice form is accurate,
+          complete, and compliant with applicable laws and regulations.</p>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd2">
+      <h2 class="terms-section-title"><span class="section-num">4</span> User Responsibilities</h2>
+      <div class="terms-body">
+        <p>By using this Service, you agree that:</p>
+        <ul>
+          <li>You are solely responsible for all content entered into the invoice generator</li>
+          <li>You will not use the Service to create fraudulent or misleading invoices</li>
+          <li>You will comply with all applicable local, state, and national laws when creating invoices</li>
+          <li>You will verify all calculations, tax amounts, and totals before using any generated invoice</li>
+          <li>You understand that RupaX is a tool and not a licensed accounting or financial advisory service</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd1">
+      <h2 class="terms-section-title"><span class="section-num">5</span> Fare Splitting Feature</h2>
+      <div class="terms-body">
+        <p>The fare splitting feature is provided as a convenience utility. While we use integer arithmetic to avoid
+          floating-point rounding errors:</p>
+        <ul>
+          <li>RupaX is not responsible for any disputes arising from fare splits</li>
+          <li>Users should verify split calculations independently before settling payments</li>
+          <li>The maximum amount for splitting is capped at ₹10,00,00,000 (10 crore) for safety</li>
+          <li>The maximum number of split participants is 100</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd2">
+      <h2 class="terms-section-title"><span class="section-num">6</span> Data &amp; Privacy</h2>
+      <div class="terms-body">
+        <p>RupaX processes all data locally in your browser. Specifically:</p>
+        <ul>
+          <li><strong>No server uploads:</strong> Invoice data is not sent to any external server</li>
+          <li><strong>Local storage only:</strong> Business details are saved to your browser's localStorage for
+            auto-fill convenience</li>
+          <li><strong>No tracking:</strong> RupaX does not use analytics, cookies for tracking, or third-party data
+            processors</li>
+          <li><strong>User control:</strong> You can clear all saved data at any time by clearing your browser's
+            localStorage</li>
+        </ul>
+        <p>The only external requests made by the application are for font loading (Google Fonts) and optional
+          geolocation reverse-geocoding (OpenStreetMap Nominatim).</p>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd1">
+      <h2 class="terms-section-title"><span class="section-num">7</span> Intellectual Property</h2>
+      <div class="terms-body">
+        <p>The RupaX name, logo, and all visual design elements are the intellectual property of the RupaX project.
+          Users may not:</p>
+        <ul>
+          <li>Use the RupaX brand to imply endorsement of their invoices</li>
+          <li>Redistribute modified versions of the Service under the RupaX name</li>
+          <li>Remove or alter the &ldquo;Secured by RupaX&rdquo; footer on generated invoices</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd2">
+      <h2 class="terms-section-title"><span class="section-num">8</span> Limitation of Liability</h2>
+      <div class="terms-body">
+        <p>To the maximum extent permitted by applicable law:</p>
+        <ul>
+          <li>RupaX is provided <strong>&ldquo;as is&rdquo;</strong> without warranty of any kind, express or implied
+          </li>
+          <li>RupaX makes no guarantees regarding the accuracy of tax calculations</li>
+          <li>In no event shall RupaX, its creators, or contributors be liable for any direct, indirect, incidental, or
+            consequential damages</li>
+          <li>The Service may contain bugs or errors — users should always verify output independently</li>
+        </ul>
+        <p><strong>RupaX is a tool for generating invoice documents. It is not a substitute for professional accounting,
+            legal, or tax advice.</strong></p>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd1">
+      <h2 class="terms-section-title"><span class="section-num">9</span> Prohibited Uses</h2>
+      <div class="terms-body">
+        <p>You may not use RupaX to:</p>
+        <ul>
+          <li>Generate invoices for illegal goods or services</li>
+          <li>Create fraudulent or forged financial documents</li>
+          <li>Misrepresent tax amounts or business information</li>
+          <li>Impersonate another business or individual</li>
+          <li>Circumvent any rate limits or abuse protections built into the Service</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="terms-section reveal rd2">
+      <h2 class="terms-section-title"><span class="section-num">10</span> Governing Law</h2>
+      <div class="terms-body">
+        <p>These Terms shall be governed by and construed in accordance with the laws of India. Any disputes arising
+          from the use of this Service shall be subject to the exclusive jurisdiction of the courts in India.</p>
+      </div>
+    </section>
+
+    <div class="last-updated">Last updated: March 27, 2026</div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class=footer-logo>
+      <span class=footer-logo-icon>
+        <svg viewBox="0 0 20 20" fill=none stroke=currentColor stroke-width=2.2 stroke-linecap=round>
+          <rect x=3 y=3 width=14 height=14 rx=2 />
+          <line x1=3 y1=8 x2=17 y2=8 />
+          <line x1=7 y1=13 x2=13 y2=13 />
+        </svg>
+      </span>
+      RupaX
+    </div>
+    <nav class=footer-links aria-label="Footer navigation">
+      <a href=index.html>Home</a>
+      <a href=app.html>Create Invoice</a>
+      <a href=about.html>About</a>
+      <a href=blogs.html>Blog</a>
+      <a href=terms.html>Terms</a>
+    </nav>
+    <div class=footer-copy>&copy; 2025 RupaX. Built with integrity.</div>
+  </footer>
+
+  <script>
+    const _t = localStorage.getItem("rupax_theme") || "dark";
+    document.documentElement.setAttribute("data-theme", _t);
+    const _s = document.getElementById("nav-sun"), _m = document.getElementById("nav-moon");
+    function toggleTheme() { const e = "dark" === (document.documentElement.getAttribute("data-theme") || "dark") ? "light" : "dark"; document.documentElement.setAttribute("data-theme", e), localStorage.setItem("rupax_theme", e), _s && _m && (_s.style.display = "dark" === e ? "none" : "", _m.style.display = "dark" === e ? "" : "none") }
+    "dark" === _t && _s && _m && (_s.style.display = "none", _m.style.display = "");
+    const obs = new IntersectionObserver((e => { e.forEach((e => { e.isIntersecting && (e.target.classList.add("visible"), obs.unobserve(e.target)) })) }), { threshold: .1 });
+    document.querySelectorAll(".reveal").forEach((e => obs.observe(e)));
+    function openDrawer() { document.getElementById('mob-drawer').classList.add('open'); document.getElementById('drawer-overlay').classList.add('open'); document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'true'); document.body.style.overflow = 'hidden'; }
+    function closeDrawer() { document.getElementById('mob-drawer').classList.remove('open'); document.getElementById('drawer-overlay').classList.remove('open'); document.getElementById('hamburger-btn').setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
+  </script>
+
+  <script>
+    const URL_TO_PING = 'https://rupax-server.onrender.com';  // or /ping
+    const INTERVAL_MS = 10 * 60 * 1000;  // 10 minutes (adjust: 600000 ms)
+
+    async function pingServer() {
+      try {
+        const response = await fetch(URL_TO_PING, {
+          method: 'GET',
+          mode: 'no-cors',        // Use if CORS blocks it (less info)
+          cache: 'no-store'
+        });
+
+        console.log(`${new Date().toISOString()} - Ping successful: ${response.status}`);
+      } catch (error) {
+        console.error(`${new Date().toISOString()} - Ping failed:`, error.message);
+      }
+    }
+
+    // Initial ping + recurring
+    pingServer();
+    setInterval(pingServer, INTERVAL_MS);
+
+    // Optional: Ping on visibility change (helps when tab is backgrounded)
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        pingServer();
+      }
+    });
+  </script>
+</body>
+
+</html>
